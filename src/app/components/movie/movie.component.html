@@ -9,9 +9,13 @@
         <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
       </div>
       <div class="col-md-7">
+        <h2><p>{{movie.tagline}}</p></h2>
         <ul class="list-group">
+          <li class="list-group-item">Overview: {{movie.overview}}</li>
           <li class="list-group-item">Genres: <span *ngFor = "let genre of movie.genres">{{genre.name}}, </span></li>
           <li class="list-group-item">Release Date: {{movie.release_date}}</li>
+          <li class="list-group-item">Rating: {{movie.vote_average}}</li>
+          <li class="list-group-item">Votes: {{movie.vote_count}}</li>
         </ul>
         <br>
         <a *ngIf = "movie.homepage" href="{{movie.homepage}}" target="_blank" class="btn btn-default">Visit Movie Homepage</a>
