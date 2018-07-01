@@ -1,0 +1,27 @@
+.h-50 {
+ min-height: 50px;
+}
+
+body {
+  color: #259466;
+  
+  /* background: linear-gradient(to right, #259466, #527752, blue) */
+  /* background: linear-gradient(to right, #475f55, #177160, #284c28); */
+  /* background: linear-gradient(to right, #c33764 , #1d2671) */
+  /* background-image: linear-gradient(to right, #5ee7df 0%, #b490ca 100%); */
+  background: linear-gradient(to right,#2b5876,  #4e4376)
+  /* background: linear-gradient(to right,#8360c3,  #2ebf91) */
+}
+.jumbotron {
+  background-color: #0b3744
+}
+h1 {
+  background: -webkit-linear-gradient(#59C173,#a17fe0, #5D26C1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list-group-item {
+  border: none;
+  background: transparent
+}

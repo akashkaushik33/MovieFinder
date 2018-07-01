@@ -4,5 +4,15 @@ img{
 }
 
 .thumbs{
+    text-align: center;
     min-height: 410px;
 }
+h4 {
+    font-size: 18px
+}
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

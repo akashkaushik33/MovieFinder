@@ -5,7 +5,7 @@
     <form (keypress) = "searchMovies()">
       <input type="text" class="form-control" [(ngModel)] = "searchStr" name="searchStr">
       <br>
-      <button class="btn btn-primary btn-lg">Find</button>
+      <!-- <button class="btn btn-primary btn-lg">Find</button> -->
     </form>
   </div>
 </div>
@@ -21,13 +21,41 @@
       <div *ngFor = "let movie of searchRes;let i = index" class="col-md-2">
           <div *ngIf = "i < 20" class="thumbs" >
             <img *ngIf = "movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
-            <h4>{{movie.title}}</h4>
+            <div class="h-50">
+              <h4>{{movie.title}}</h4>
+            </div>
             <p>{{movie.release_date}}</p>
             <p><a class="btn btn-default"routerLink = "/movie/{{movie.id}}">View details &raquo;</a></p>
           </div>
       </div>
     </div>
   </div>
+</div>
+
+
+<!--In Theater Movies-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Movies in Theater</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div *ngFor = "let movie of inTheaterList;let i = index" class="col-md-2">
+        <div *ngIf = "movie.poster_path">
+          <div *ngIf = "i < 12" class="thumbs">
+            <img *ngIf = "movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+            <div class="h-50">
+              <h4>{{movie.title}}</h4>
+            </div>
+            <p>{{movie.release_date}}</p>
+            <p><a class="btn btn-default" routerLink = "/movie/{{movie.id}}">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
@@ -43,7 +71,9 @@
         <div *ngIf = "movie.poster_path" >
           <div *ngIf = "i < 12" class="thumbs" >
             <img *ngIf = "movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
-            <h4>{{movie.title}}</h4>
+            <div class="h-50">
+              <h4>{{movie.title}}</h4>
+            </div>
             <p>{{movie.release_date}}</p>
             
           </div>
@@ -52,27 +82,3 @@
     </div>
   </div>
 </div>
-
-<!--In Theater Movies-->
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Movies in Theater</h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div *ngFor = "let movie of inTheaterList;let i = index" class="col-md-2">
-        <div *ngIf = "movie.poster_path">
-          <div *ngIf = "i < 12" class="thumbs">
-            <img *ngIf = "movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
-            <h4>{{movie.title}}</h4>
-            <p>{{movie.release_date}}</p>
-            <p><a class="btn btn-default" routerLink = "/movie/{{movie.id}}">View details &raquo;</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
